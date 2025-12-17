@@ -1,0 +1,100 @@
+/* Reset básico e configurações globais */
+body {
+    scroll-behavior: smooth;
+    background-color: #09090b; /* Fallback */
+}
+
+/* Utilitários de Navegação */
+.nav-link {
+    @apply text-[0.65rem] uppercase tracking-[0.2em] font-bold text-noir-300 hover:text-white transition-colors relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-px after:bg-luxe-400 after:transition-all after:duration-300 hover:after:w-full cursor-pointer;
+}
+
+.mobile-link {
+    @apply font-serif text-3xl text-white hover:text-luxe-400 transition-colors cursor-pointer;
+}
+
+/* Botões melhorados (Gold Gradient) */
+.btn-primary {
+    @apply inline-flex items-center justify-center bg-gradient-to-r from-luxe-400 to-luxe-600 text-noir-950 px-8 py-4 transition-all duration-300 font-sans tracking-[0.25em] text-[0.65rem] uppercase font-bold rounded-full border border-transparent hover:brightness-110 hover:shadow-xl hover:shadow-luxe-500/20 hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer;
+}
+
+.btn-outline {
+    @apply inline-flex items-center justify-center bg-transparent text-white px-8 py-4 transition-all duration-300 font-sans tracking-[0.25em] text-[0.65rem] uppercase font-bold rounded-full border border-white/30 hover:border-luxe-400 hover:text-luxe-400 hover:shadow-xl hover:shadow-luxe-500/10 hover:-translate-y-0.5 active:translate-y-0 active:shadow-none cursor-pointer;
+}
+
+/* Cards (Dark Glass) */
+.procedure-card {
+    @apply bg-noir-800/50 backdrop-blur-sm rounded-[2rem] overflow-hidden transition-all duration-500 ease-out border border-white/5 h-full flex flex-col hover:shadow-2xl hover:shadow-luxe-500/10 hover:border-luxe-500/30 hover:-translate-y-2;
+}
+
+.card-img {
+    @apply w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 group-hover:opacity-100;
+}
+
+.testimonial-card {
+    @apply bg-noir-800/50 backdrop-blur-sm p-10 rounded-[2rem] hover:shadow-xl hover:shadow-luxe-500/5 transition-all duration-500 group border border-white/5 flex flex-col justify-between h-full border-b-4 border-b-transparent hover:border-b-luxe-400;
+}
+
+/* Formulário melhorado (Dark Minimal) */
+.form-input {
+    @apply w-full bg-transparent border-b border-white/20 rounded-none py-4 px-2 focus:outline-none focus:border-luxe-400 transition-all font-serif text-lg text-white placeholder:text-noir-500 placeholder:font-sans placeholder:text-sm placeholder:tracking-wide;
+}
+
+.icon-circle {
+    @apply w-12 h-12 rounded-full bg-noir-800 flex items-center justify-center group-hover:bg-luxe-500 group-hover:text-noir-900 transition-all duration-500 shadow-sm border border-white/10 text-luxe-400;
+}
+
+.info-label {
+    @apply text-white font-medium text-xs uppercase tracking-widest;
+}
+
+.info-text {
+    @apply text-noir-300 font-serif text-lg mt-1 group-hover:text-luxe-400 transition-colors;
+}
+
+/* Scrollbar Customizada (Dark) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+    background: #3f3f46;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #fbbf24;
+}
+
+/* Utility to hide scrollbar but keep functionality */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Animação Fade In */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Texto Gradiente Dourado */
+.text-gold-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-luxe-200 via-luxe-400 to-luxe-600;
+}
+
+/* Map Filter for Dark Mode */
+.map-dark-mode {
+    filter: invert(90%) hue-rotate(180deg) contrast(90%);
+}
